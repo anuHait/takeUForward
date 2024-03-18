@@ -66,8 +66,8 @@ function Page() {
             </tr>
           </thead>
           <tbody>
-            {submissions.map((submission) => (
-              <tr key={submission.id} className="bg-gray-100 p-10">
+            {submissions.map((submission,index) => (
+              <tr key={submission.id} className={`${index % 2 === 0 ? 'bg-gray-100' : 'bg-gray-200'} p-10 text-sm`}>
                 <td className="p-1.5 border lg:p-2">{submission.username}</td>
                 <td className="p-1.5 border lg:p-2">{submission.language}</td>
                 <td className="p-1.5 border lg:p-2">{submission.stdin}</td>
